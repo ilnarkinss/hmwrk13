@@ -1,0 +1,110 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: Arial;
+}
+
+#work_status {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+#work_status > div {
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  color: white;
+}
+#work_status #worked {
+  background-color: #27ae60;
+}
+#work_status #ignore {
+  background-color: #e74c3c;
+}
+
+#work_inputs {
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#work_inputs > input {
+  width: 250px;
+  height: 30px;
+  margin: 10px 0;
+  border-radius: 10px;
+  padding: 0 5px;
+}
+#work_inputs > button {
+  width: 150px;
+  height: 30px;
+  border-radius: 10px;
+  background-color: transparent;
+  border: 3px solid #f1c40f;
+  color: #f39c12;
+  font-size: 14px;
+}
+
+#work_list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 15px;
+  grid-row-gap: 15px;
+}
+#work_list .description {
+  padding: 0 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  width: 100%;
+}
+#work_list .description > p {
+  color: white;
+  font-size: 20px;
+}
+#work_list .statusCard {
+  width: 50px;
+  display: block;
+  justify-content: flex-end;
+}
+#work_list .statusCard > div {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 24px;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 5px;
+}
+#work_list .statusCard .done {
+  background-color: #2ecc71;
+}
+#work_list .statusCard .canceled {
+  background-color: #e74c3c;
+}
+
+/*CARDS*/
+#work_list > div {
+  display: flex;
+  justify-content: space-between;
+  height: 100px;
+  background-color: #2c3e50;
+}
+
+@media all and (max-width: 768px) {
+  #work_list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media all and (max-width: 425px) {
+  #work_list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
