@@ -29,8 +29,6 @@ if(localStorage.getItem('ignoreNum') != null ){
 workedSpan.innerText = ` ${workedNum}`;
 ignoreSpan.innerText = ` ${ignoreNum}`;
 
-localStorage.setItem('lst', JSON.stringify(lst))
-
 
 function render(wrkElem) {
 	workList.innerText = '';
@@ -99,4 +97,4 @@ addEventListener('submit', event=>{
 		return
 	};
 });
-render(JSON.parse(localStorage.getItem('lst')))
+render(JSON.parse(localStorage.getItem('lst')));
