@@ -6,7 +6,7 @@ const workedSpan = workedElem.querySelector('span');
 const ignoreSpan = ignoreElem.querySelector('span');
 
 
-let lst = [];
+let lst = JSON.parse(localStorage.lst || '[]');
 
 
 let workedNum = localStorage.getItem('workedNum');
